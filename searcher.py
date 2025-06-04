@@ -11,7 +11,8 @@ def get_patches_within_bbox(ne_corner: Tuple[float, float], sw_corner: Tuple[flo
     Parameters:
     - ne_corner (Tuple[float, float]): Northeast corner of bounding box.
     - sw_corner (Tuple[float, float]): Southwest corner of bounding box.
-    - folder_path (str): Directory where the raster files are stored. Default is 'output'.
+    - folder_path (str): Directory where the raster files are stored. Default is
+      'Patch_Cropper/patches_test'.
     
     Returns:
     List[str]: List of matching raster files.
