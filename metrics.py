@@ -157,9 +157,13 @@ class PixelwiseMetrics(object):
             class_data = self.data["pixelclass_" + str(c)]
             preds_c = y_hat == c
             targs_c = y == c
-            num_correct = (preds_c * targs_c).sum().cpu().detach().numpy()
             num_pixels = np.sum(targs_c.cpu().detach().numpy())
-            class_data["acc"] += num_correct / num_pixels
+
+            if num_pixels > 0:
+                num_correct = (
+                    preds_c * targs_c
+                ).sum().cpu().detach().numpy()
+                class_data["acc"] += num_correct / num_pixels
 
     def get_classwise_accuracy(self):
         return {k: el['acc'] / self.count for k, el in self.data.items()}
