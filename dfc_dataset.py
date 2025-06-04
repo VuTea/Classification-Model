@@ -453,7 +453,7 @@ class DFCDataset(Dataset):
         axs[1].imshow(s1[0])
         axs[1].set_title("Sentinel-1 VV polarization")
         axs[2].imshow(s1[1])
-        axs[2].set_title("Sentinel-2 VH polarization")
+        axs[2].set_title("Sentinel-1 VH polarization")
 
         lc_data = lc.squeeze()
         data_stat = lc_data[lc_data != 255]
@@ -515,7 +515,7 @@ class DFCDataset(Dataset):
         axs[1].imshow(s1[0])
         axs[1].set_title("Sentinel-1 VV polarization")
         axs[2].imshow(s1[1])
-        axs[2].set_title("Sentinel-2 VH polarization")
+        axs[2].set_title("Sentinel-1 VH polarization")
         lc_plot = lc.squeeze().copy()
         lc_plot[lc_plot == 255] = np.nan
         axs[3].imshow(lc_plot)
