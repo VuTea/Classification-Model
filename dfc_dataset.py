@@ -16,7 +16,7 @@ from utils import AlbumentationsToTorchTransform
 from dfc_sen12ms_dataset import DFCSEN12MSDataset, Seasons, S1Bands, S2Bands, LCBands
 
 IGBP_map = {
-    1: "Evergreen Needleleaf FOrests",
+    1: "Evergreen Needleleaf Forests",
     2: "Evergreen Broadleaf Forests",
     3: "Deciduous Needleleaf Forests",
     4: "Deciduous Broadleaf Forests",
